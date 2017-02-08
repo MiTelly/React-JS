@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #app {
+        width: 1000px;
+        height: 200px;
+        margin: 150px 0 0 150px;
+        background-color: purple;
+        text-align: center;
+        font-size: 75px;
+        color: blue;
+      }
+
+      #test {
+        outline: none;
+      }
+    </style>
+
+    <script src="https://fb.me/react-0.14.7.js"></script>
+    <script src="https://fb.me/react-dom-0.14.7.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script type="text/jsx">
+
+    const Banner = React.createClass({
+      getInitialState: function() {
+        return {counter: 1, text: "Click me!"};
+      },
+
+      bannerSwitch: function () {
+        let banner = document.getElementById('test');
+
+        if (this.state.counter == 1) {
+          this.setState({counter: this.state.counter + 1, text: "This is"});
+          document.getElementById('app').style.color = "yellow";
+        } else if (this.state.counter == 2) {
+          this.setState({counter: this.state.counter + 1, text: "a React"});
+          document.getElementById('app').style.color = "red";
+        } else if (this.state.counter == 3) {
+          this.setState({counter: this.state.counter + 1, text: "component!"});
+          document.getElementById('app').style.color = "blue";
+        } else if (this.state.counter == 4) {
+          this.setState({counter: this.state.counter = 2, text: "This is"});
+          document.getElementById('app').style.color = "yellow";
+        }
+      },
+
+      render: function() {
+        return <div>
+                  <h1 id="test" onClick = {this.bannerSwitch}>{this.state.text}</h1>
+              </div>
+      }
+    });
+
+    ReactDOM.render(<Banner />, document.getElementById('app'));
+
+    </script>
+
+  </head>
+  <body>
+
+    <div id="app" >
+    </div>
+
+  </body>
+</html>
