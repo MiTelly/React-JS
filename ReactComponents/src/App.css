@@ -1,0 +1,14 @@
+
+#clickButton {
+  width: 120px;
+  height: 80px;
+  font-size: 40px;
+}
+#toggleLabel {
+  margin-left: 20px;
+}
+#toggle {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+}
