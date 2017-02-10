@@ -3,8 +3,8 @@ import './App.css';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {left:0, movement: 0,increment: 50};
   }
   componentDidMount() {
@@ -19,7 +19,6 @@ class App extends Component {
     if (this.state.movement <= 0) {
       this.setState({increment: 50});
     }
-
   }
   render() {
     let styles = {
