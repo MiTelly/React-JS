@@ -1,0 +1,31 @@
+
+.App-header {
+  background-color: blue;
+  height: 150px;
+  color: white;
+}
+
+.App-header h1 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.App-header ul {
+  padding-left: 10px;
+}
+
+.App-header li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 5px;
+  font-size: 17px;
+
+}
+
+.Nav {
+  padding: 0;
+}
+
+.Children {
+  margin-top: 100px;
+}
